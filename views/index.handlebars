@@ -1,0 +1,38 @@
+<h1>WELCOME TO BURGERVILLE</h1>
+
+<h2>BURGERS THAT HAVEN'T BEEN CONSUMED</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+       {{!-- {{> burgers/burger-block devoured=true}} --}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>BURGERS THAT HAVE BEEN CONSUMED</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if sleepy}}
+      {{!-- {{> burgers/burger-block sleep=false}} --}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Create a new BURGER</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burg">BURGER Name:</label>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="deved">Sleepy?</label><br>
+    <input type="radio" name="devoured" value="1" checked> CONSUMED<br>
+    <input type="radio" name="devoured" value="0"> UNCONSUMED
+  </div>
+
+  <button type="submit">SNAP YOUR BURGER INTO EXISTENCE</button>
+</form>
