@@ -1,7 +1,7 @@
 // BOILERPLATE connections setup code. Used CATS class assignment for reference.
 
 // Set up MySQL connection.
-const mysql = require("mysql");
+let mysql = require("mysql");
 
 let connection;
 
