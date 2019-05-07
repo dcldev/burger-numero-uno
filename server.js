@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 // This is the place holder for the routes that I need to access my api requests.
 // Below is an example route that will be commented out as I build the homework.
-var routes = require("./controllers/catsController.js");
+var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
 

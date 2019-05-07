@@ -1,0 +1,14 @@
+<li>
+	{{burger_name}}
+
+	<button class="alter-devoured" data-id="{{id}}" data-newmonch="{{devoured}}">
+
+	
+		{{#if devoured}}MONCH MONCH TIME{{else}}ALREADY MONCHED{{/if}}
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>
+
+
+{{!-- important when naming data attributes do not use camelcase when usin jquery as it will break the mysql data insertion --}}
