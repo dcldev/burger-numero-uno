@@ -1,38 +1,50 @@
-<h1>WELCOME TO BURGERVILLE</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="container">
+        <h1 class="display-4 ml-5">WELCOME TO BURGERVILLE</h1>
+        <p class="lead ml-5">POP: GLUTTONY</p>
+      </div>
+    </div>
+    <div class="col text-center mr-5">
+      <h2>Create a new BURGER</h2>
+      <form class="create-form"></form>
+
+        <div class="form-group">
+          <label for="burg">BURGER Name:</label>
+          <input type="text" id="burg" name="burger_name">
+        </div>
+
+        <div class="form-group">
+          <label for="deved">WAS IT EATEN?</label><br>
+          <input type="radio" name="devoured" value="1" checked> CONSUMED<br>
+          <input type="radio" name="devoured" value="0"> UNCONSUMED
+        </div>
+
+        <button type="submit" class="btn btn-warning">SNAP YOUR BURGER INTO EXISTENCE</button>
+    </div>
+  </div>
+</div>
 
 <h2>BURGERS THAT HAVEN'T BEEN CONSUMED</h2>
 
-<ul>
-  {{#each burgers}}
+<ul class="list-group">
+  <h3>{{#each burgers}}
     {{#unless devoured}}
-       {{> burgers/burger-block devoured=true}}
+    {{> burgers/burger-block devoured=true}}
     {{/unless}}
-  {{/each}}
+    {{/each}}</h3>
 </ul>
 
 <h2>BURGERS THAT HAVE BEEN CONSUMED</h2>
 
-<ul>
+<ul class="list-group">
   {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
+  {{#if devoured}}
+  {{> burgers/burger-block devoured=false}}
+  {{/if}}
   {{/each}}
 </ul>
 
-<h2>Create a new BURGER</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="burg">BURGER Name:</label>
-    <input type="text" id="burg" name="burger_name">
-  </div>
-
-  <div class="form-group">
-    <label for="deved">WAS IT EATEN?</label><br>
-    <input type="radio" name="devoured" value="1" checked> CONSUMED<br>
-    <input type="radio" name="devoured" value="0"> UNCONSUMED
-  </div>
-
-  <button type="submit">SNAP YOUR BURGER INTO EXISTENCE</button>
 </form>

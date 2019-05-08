@@ -1,13 +1,13 @@
 <li>
 	{{burger_name}}
 
-	<button class="alter-devoured" data-id="{{id}}" data-newmonch="{{devoured}}">
+	<button type="button" class="alter-devoured btn btn-success" data-id="{{id}}" data-newmonch="{{devoured}}">
 
 	
 		{{#if devoured}}MONCH MONCH TIME{{else}}ALREADY MONCHED{{/if}}
 	</button>
 
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+	<button type="button" class="delete-burger btn btn-danger" data-id="{{this.id}}">DELETE!</button>
 </li>
 
 
